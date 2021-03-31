@@ -1,9 +1,9 @@
 #include <stdio.h>
-
+#include <stdbool.h>
 #include <math.h>
 
 
-int add(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
+bool add(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
 	char numeroEmString[100];
 	int i;
 	
@@ -23,13 +23,13 @@ int add(int integerPart01, int numerator01, int denominator01, int integerPart02
 	
 
 	if(fmod(somaDasDuasPartes, 1) == 0 && somaDasDuasPartes != 1 ){
-		return 0;
+		return false;
 	}else{
-		return 1;
+		return true;
 	}
 }
 
-int subtract(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
+bool subtract(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
 	char numeroEmString[100];
 	int i;
 	
@@ -49,9 +49,9 @@ int subtract(int integerPart01, int numerator01, int denominator01, int integerP
 	
 
 	if(fmod(somaDasDuasPartes, 1) == 0 && somaDasDuasPartes != 1 ){
-		return 0;
+		return false;
 	}else{
-		return 1;
+		return true;
 	}
 }
 
