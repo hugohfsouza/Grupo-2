@@ -6,7 +6,7 @@
 
 bool add(int parteInteira01, int numerador01, int denominador01, int parteInteira02, int numerador02, int denominador02, char resposta[], int tamanhoArrayResposta){
 	char numeroEmString[100];
-	int i, tamanhoDaStringSomaDasDuasPartes;
+	int i;
 	
 	float casasDecimais01 = (float) numerador01 / (float) denominador01;
 	casasDecimais01 = (float) parteInteira01 + casasDecimais01;
@@ -32,7 +32,7 @@ bool add(int parteInteira01, int numerador01, int denominador01, int parteInteir
 
 bool subtract(int parteInteira01, int numerador01, int denominador01, int parteInteira02, int numerador02, int denominador02, char resposta[], int tamanhoArrayResposta){
 	char numeroEmString[100];
-	int i, tamanhoDaStringSomaDasDuasPartes;
+	int i;
 	
 	float casasDecimais01 = (float) numerador01 / (float) denominador01;
 	casasDecimais01 = (float) parteInteira01 + casasDecimais01;
