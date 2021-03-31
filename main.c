@@ -1,58 +1,57 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+
 #include <math.h>
 
 
-bool add(int parteInteira01, int numerador01, int denominador01, int parteInteira02, int numerador02, int denominador02, char resposta[], int tamanhoArrayResposta){
+int add(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
 	char numeroEmString[100];
 	int i;
 	
-	float casasDecimais01 = (float) numerador01 / (float) denominador01;
-	casasDecimais01 = (float) parteInteira01 + casasDecimais01;
+	float casasDecimais01 	= (float) numerator01 / (float) denominator01;
+	casasDecimais01 		= (float) integerPart01 + casasDecimais01;
 	
-	float casasDecimais02 = (float) numerador02 / (float) denominador02;
-	casasDecimais02 = (float) parteInteira02 + casasDecimais02;
+	float casasDecimais02 	= (float) numerator02 / (float) denominator02;
+	casasDecimais02 		= (float) integerPart02 + casasDecimais02;
 	
 	float somaDasDuasPartes = casasDecimais01 + casasDecimais02;
 	
 	sprintf(numeroEmString, "%.100f", somaDasDuasPartes);
 	
-	for(i=0; i<tamanhoArrayResposta; i++){
-		resposta[i] = numeroEmString[i];
+	for(i=0; i<arrayLength; i++){
+		result[i] = numeroEmString[i];
 	}
 	
 
 	if(fmod(somaDasDuasPartes, 1) == 0 && somaDasDuasPartes != 1 ){
-		return false;
+		return 0;
 	}else{
-		return true;
+		return 1;
 	}
 }
 
-bool subtract(int parteInteira01, int numerador01, int denominador01, int parteInteira02, int numerador02, int denominador02, char resposta[], int tamanhoArrayResposta){
+int subtract(int integerPart01, int numerator01, int denominator01, int integerPart02, int numerator02, int denominator02, char result[], int arrayLength){
 	char numeroEmString[100];
 	int i;
 	
-	float casasDecimais01 = (float) numerador01 / (float) denominador01;
-	casasDecimais01 = (float) parteInteira01 + casasDecimais01;
+	float casasDecimais01 	= (float) numerator01 / (float) denominator01;
+	casasDecimais01 		= (float) integerPart01 + casasDecimais01;
 	
-	float casasDecimais02 = (float) numerador02 / (float) denominador02;
-	casasDecimais02 = (float) parteInteira02 + casasDecimais02;
+	float casasDecimais02 	= (float) numerator02 / (float) denominator02;
+	casasDecimais02 		= (float) integerPart02 + casasDecimais02;
 	
 	float somaDasDuasPartes = casasDecimais01 - casasDecimais02;
 	
 	sprintf(numeroEmString, "%.100f", somaDasDuasPartes);
 	
-	for(i=0; i<tamanhoArrayResposta; i++){
-		resposta[i] = numeroEmString[i];
+	for(i=0; i<arrayLength; i++){
+		result[i] = numeroEmString[i];
 	}
 	
 
 	if(fmod(somaDasDuasPartes, 1) == 0 && somaDasDuasPartes != 1 ){
-		return false;
+		return 0;
 	}else{
-		return true;
+		return 1;
 	}
 }
 
